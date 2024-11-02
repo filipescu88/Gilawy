@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria zdjęć - Giławy w obiektywie | Warmia</title>
+    <meta name="description" content="Zobacz piękno Giław w naszej galerii zdjęć. Malownicze krajobrazy, zabytki, wydarzenia i życie codzienne warmińskiej wsi w fotograficznej dokumentacji.">
+    <meta name="keywords" content="zdjęcia Giław, galeria Giławy, fotografie Warmia, krajobrazy warmińskie, zdjęcia wsi">
+    <meta name="author" content="Giławy">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gilawy.pl/galeria.html">
+    <meta property="og:title" content="Galeria zdjęć - Giławy w obiektywie">
+    <meta property="og:description" content="Zobacz piękno Giław w naszej galerii zdjęć. Malownicze krajobrazy i życie wsi.">
+    <meta property="og:image" content="https://www.gilawy.pl/images/galeria-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.gilawy.pl/galeria.html">
+    <meta property="twitter:title" content="Galeria zdjęć - Giławy w obiektywie">
+    <meta property="twitter:description" content="Zobacz piękno Giław w naszej galerii zdjęć. Malownicze krajobrazy i życie wsi.">
+    <meta property="twitter:image" content="https://www.gilawy.pl/images/galeria-preview.jpg">
+
+    <!-- Schema.org dla galerii -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Galeria zdjęć Giław",
+        "description": "Kolekcja zdjęć przedstawiających życie i krajobrazy wsi Giławy",
+        "image": "https://www.gilawy.pl/images/galeria-preview.jpg",
+        "url": "https://www.gilawy.pl/galeria.html"
+    }
+    </script>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.gilawy.pl/galeria.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Dodajemy CSS dla lightbox -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 70px;
+        }
+        
+        header {
+            background-color: #2c5530;
+            color: white;
+            text-align: center;
+            padding: 3rem;
+            margin-bottom: 0;
+        }
+
+        nav {
+            background-color: #1a331d;
+        }
+
+        .gallery-item {
+            margin-bottom: 30px;
+            transition: transform 0.2s;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .gallery-categories .btn {
+            margin: 5px;
+        }
+
+        footer {
+            background-color: #2c5530;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .category-title {
+            border-bottom: 2px solid #2c5530;
+            padding-bottom: 10px;
+            margin: 30px 0;
+        }
+
+        .gallery-caption {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="display-4">Galeria zdjęć</h1>
+        <p class="lead">Zobacz piękno Giław w obiektywie</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Strona główna</a></li>
+                    <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agroturystyka.html">Agroturystyka</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <!-- Filtry kategorii -->
+        <div class="gallery-categories text-center mb-5">
+            <button class="btn btn-success" data-filter="all">Wszystkie</button>
+            <button class="btn btn-outline-success" data-filter="nature">Przyroda</button>
+            <button class="btn btn-outline-success" data-filter="architecture">Architektura</button>
+            <button class="btn btn-outline-success" data-filter="events">Wydarzenia</button>
+            <button class="btn btn-outline-success" data-filter="historical">Historyczne</button>
+        </div>
+
+        <!-- Przyroda -->
+        <h2 class="category-title">Przyroda</h2>
+        <div class="row">
+            <div class="col-md-4 gallery-item" data-category="nature">
+                <div class="gallery-image-container">
+                    <a href="images/original/przyroda/jezioro-serwent-zachod-slonca.jpg" 
+                       data-lightbox="gallery" 
+                       data-title="Zachód słońca nad jeziorem Serwent w Giławach">
+                        <img src="images/thumbnails/przyroda/jezioro-serwent-zachod-slonca-thumb.jpg" 
+                             alt="Zachód słońca nad jeziorem Serwent w Giławach">
+                    </a>
+                </div>
+                <div class="gallery-caption">Zachód słońca nad jeziorem Serwent</div>
+            </div>
+
+            <div class="col-md-4 gallery-item" data-category="nature">
+                <div class="gallery-image-container">
+                    <a href="images/original/przyroda/pola-gilawy-wiosna.jpg" 
+                       data-lightbox="gallery" 
+                       data-title="Wiosenne pola w Giławach">
+                        <img src="images/thumbnails/przyroda/pola-gilawy-wiosna-thumb.jpg" 
+                             alt="Wiosenne pola w Giławach">
+                    </a>
+                </div>
+                <div class="gallery-caption">Wiosenne pola w Giławach</div>
+            </div>
+
+            <div class="col-md-4 gallery-item" data-category="nature">
+                <div class="gallery-image-container">
+                    <a href="images/original/przyroda/las-gilawy-sciezka.jpg" 
+                       data-lightbox="gallery" 
+                       data-title="Leśna ścieżka w okolicach Giław">
+                        <img src="images/thumbnails/przyroda/las-gilawy-sciezka-thumb.jpg" 
+                             alt="Leśna ścieżka w okolicach Giław">
+                    </a>
+                </div>
+                <div class="gallery-caption">Leśna ścieżka</div>
+            </div>
+        </div>
+
+        <!-- Architektura -->
+        <h2 class="category-title">Architektura</h2>
+        <div class="row">
+            <div class="col-md-4 gallery-item" data-category="architecture">
+                <div class="gallery-image-container">
+                    <a href="images/original/architektura/kosciol-gilawy-zabytkowy.jpg" 
+                       data-lightbox="gallery" 
+                       data-title="Zabytkowy kościół w Giławach">
+                        <img src="images/thumbnails/architektura/kosciol-gilawy-zabytkowy-thumb.jpg" 
+                             alt="Zabytkowy kościół w Giławach">
+                    </a>
+                </div>
+                <div class="gallery-caption">Zabytkowy kościół</div>
+            </div>
+
+            <div class="col-md-4 gallery-item" data-category="architecture">
+                <div class="gallery-image-container">
+                    <a href="images/original/architektura/stara-zabudowa-gilawy-01.jpg" 
+                       data-lightbox="gallery" 
+                       data-title="Stara zabudowa wiejska w Giławach">
+                        <img src="images/thumbnails/architektura/stara-zabudowa-gilawy-01-thumb.jpg" 
+                             alt="Stara zabudowa wiejska w Giławach">
+                    </a>
+                </div>
+                <div class="gallery-caption">Stara zabudowa wiejska</div>
+            </div>
+
+            <div class="col-md-4 gallery-item" data-category="architecture">
+                <div class="gallery-image-container">
+                    <a href="images/original/architektura/swietlica-wiejska-gilawy.jpg" 
+                       data-lightbox="gallery" 
+                       data-title="Świetlica wiejska w Giławach">
+                        <img src="images/thumbnails/architektura/swietlica-wiejska-gilawy-thumb.jpg" 
+                             alt="Świetlica wiejska w Giławach">
+                    </a>
+                </div>
+                <div class="gallery-caption">Świetlica wiejska</div>
+            </div>
+        </div>
+
+        <!-- Wydarzenia -->
+        <h2 class="category-title">Wydarzenia</h2>
+        <div class="row">
+            <div class="col-md-4 gallery-item" data-category="events">
+                <div class="gallery-image-container">
+                    <a href="images/original/wydarzenia/dozynki-gilawy-2023.jpg" 
+                       data-lightbox="gallery" 
+                       data-title="Dożynki w Giławach 2023">
+                        <img src="images/thumbnails/wydarzenia/dozynki-gilawy-2023-thumb.jpg" 
+                             alt="Dożynki w Giławach 2023">
+                    </a>
+                </div>
+                <div class="gallery-caption">Dożynki 2023</div>
+            </div>
+
+            <div class="col-md-4 gallery-item" data-category="events">
+                <div class="gallery-image-container">
+                    <a href="images/original/wydarzenia/festyn-rodzinny-gilawy-2023.jpg" 
+                       data-lightbox="gallery" 
+                       data-title="Festyn rodzinny w Giławach">
+                        <img src="images/thumbnails/wydarzenia/festyn-rodzinny-gilawy-2023-thumb.jpg" 
+                             alt="Festyn rodzinny w Giławach">
+                    </a>
+                </div>
+                <div class="gallery-caption">Festyn rodzinny</div>
+            </div>
+
+            <div class="col-md-4 gallery-item" data-category="events">
+                <div class="gallery-image-container">
+                    <a href="images/original/wydarzenia/spotkanie-soleckie-gilawy-2024.jpg" 
+                       data-lightbox="gallery" 
+                       data-title="Spotkanie sołeckie w Giławach">
+                        <img src="images/thumbnails/wydarzenia/spotkanie-soleckie-gilawy-2024-thumb.jpg" 
+                             alt="Spotkanie sołeckie w Giławach">
+                    </a>
+                </div>
+                <div class="gallery-caption">Spotkanie sołeckie</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="mb-0">&copy; 2024 Giławy. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <!-- Dodajemy jQuery (wymagane przez lightbox) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Dodajemy lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <!-- Skrypt do filtrowania kategorii -->
+    <script>
+        $(document).ready(function(){
+            $('.gallery-categories button').click(function(){
+                const filter = $(this).data('filter');
+                
+                $('.gallery-categories button').removeClass('btn-success').addClass('btn-outline-success');
+                $(this).removeClass('btn-outline-success').addClass('btn-success');
+
+                if(filter === 'all'){
+                    $('.gallery-item').show();
+                } else {
+                    $('.gallery-item').hide();
+                    $('.gallery-item[data-category="' + filter + '"]').show();
+                }
+            });
+
+            // Konfiguracja lightbox
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'albumLabel': "Zdjęcie %1 z %2"
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,35 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://www.gilawy.pl/sitemap.xml
+
+
+
+# Zezwól na indeksowanie wszystkich stron
+
+Allow: /index.html
+
+Allow: /historia.html
+
+Allow: /galeria.html
+
+Allow: /agroturystyka.html
+
+Allow: /kontakt.html
+
+
+
+# Zezwól na indeksowanie obrazów
+
+Allow: /images/
+
+
+
+# Blokuj dostęp do plików systemowych
+
+Disallow: /.git/
+
+Disallow: /.env
+
+Disallow: /cgi-bin/ 
